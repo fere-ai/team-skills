@@ -1,9 +1,9 @@
 ---
-name: pp-skill-authoring
+name: team-skill-authoring
 description: >-
-  Authors and reviews PP Skills to the portable Agent Skills spec. Use when
+  Authors and reviews Team Skills to the portable Agent Skills spec. Use when
   adding, editing, or reviewing a skill in this repo, or when the user mentions
-  SKILL.md, scaffolding a skill, or contributing to PP Skills.
+  SKILL.md, scaffolding a skill, or contributing to Team Skills.
 license: MIT
 metadata:
   audience: shared
@@ -11,9 +11,9 @@ metadata:
   version: "0.1.0"
 ---
 
-# PP Skill authoring
+# Team Skill authoring
 
-PP Skills is a catalog of portable Agent Skills for product and engineering teams. One folder, many agents: Cursor, Claude Code, Hermes, and anything else that reads `SKILL.md`.
+Team Skills is a catalog of portable Agent Skills for product and engineering teams. One folder, many agents: Cursor, Claude Code, Hermes, and anything else that reads `SKILL.md`.
 
 ## Quick start
 
@@ -35,7 +35,7 @@ Required by the [Agent Skills spec](https://agentskills.io/specification):
 | `name` | 1–64 chars. `[a-z0-9-]` only. No leading, trailing, or consecutive hyphens. Must match the directory name. |
 | `description` | 1–1024 chars. Third person. Capability first, then `Use when` plus trigger terms. |
 
-PP Skills also sets:
+Team Skills also sets:
 
 ```yaml
 license: MIT
@@ -109,7 +109,7 @@ Do not nest references (`references/a/b.md`). Do not chain "see that file which 
 
 - Verb or job: `writing-prd`, `incident-response`, `pr-review`
 - Not: `helper`, `utils`, `notes`, `misc`
-- Prefix `pp-` only for repo-meta skills (`pp-skill-authoring`)
+- Prefix `team-` only for repo-meta skills (`team-skill-authoring`)
 
 ## Anti-patterns
 

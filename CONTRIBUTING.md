@@ -1,9 +1,9 @@
-# Contributing to PP Skills
+# Contributing to Team Skills
 
 ## Add a skill
 
 1. Pick an audience: `product`, `engineering`, or `shared`.
-2. Read [`skills/shared/pp-skill-authoring/SKILL.md`](skills/shared/pp-skill-authoring/SKILL.md).
+2. Read [`skills/shared/team-skill-authoring/SKILL.md`](skills/shared/team-skill-authoring/SKILL.md).
 3. Copy the template:
 
    ```bash

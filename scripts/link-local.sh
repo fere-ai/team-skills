@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Symlink PP Skills into local Cursor and Claude Code skill directories.
+# Symlink Team Skills into local Cursor and Claude Code skill directories.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -17,7 +17,7 @@ Hermes: add this repo's skills/ folder as an external directory instead:
 
   skills:
     external_dirs:
-      - /path/to/pp-skills/skills
+      - /path/to/team-skills/skills
 EOF
 }
 

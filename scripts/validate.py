@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate PP Skills against the portable Agent Skills spec."""
+"""Validate Team Skills against the portable Agent Skills spec."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-# PP Skills
+# Team Skills
 
 Portable [Agent Skills](https://agentskills.io) for product and engineering teams, by Pranav Prakash.
 
@@ -33,18 +33,18 @@ Skills are authored here. Agents discover them after you install (or point) at t
 
 ### Any supported agent (`npx skills`)
 
-From a project that should use PP Skills:
+From a project that should use Team Skills:
 
 ```bash
-npx skills add /path/to/pp-skills
+npx skills add /path/to/team-skills
 ```
 
-After this repo is on GitHub:
+From GitHub:
 
 ```bash
-npx skills add <owner>/pp-skills
-npx skills add <owner>/pp-skills --skill pp-skill-authoring
-npx skills add <owner>/pp-skills -g          # all your projects
+npx skills add fere-ai/team-skills
+npx skills add fere-ai/team-skills --skill team-skill-authoring
+npx skills add fere-ai/team-skills -g          # all your projects
 ```
 
 The CLI copies or symlinks each skill into the agent-native folder (`.cursor/skills`, `.claude/skills`, `.agents/skills`, and [dozens more](https://github.com/vercel-labs/skills#supported-agents)).
@@ -56,7 +56,7 @@ Project: `npx skills add <source> -a cursor`
 Or symlink a single skill:
 
 ```bash
-ln -s /path/to/pp-skills/skills/shared/pp-skill-authoring ~/.cursor/skills/pp-skill-authoring
+ln -s /path/to/team-skills/skills/shared/team-skill-authoring ~/.cursor/skills/team-skill-authoring
 ```
 
 ### Claude Code
@@ -73,7 +73,7 @@ Point Hermes at this catalog (single source of truth, no copies):
 # ~/.hermes/config.yaml
 skills:
   external_dirs:
-    - /path/to/pp-skills/skills
+    - /path/to/team-skills/skills
 ```
 
 Or trust this repo as project-local skills after cloning, then run `hermes skills trust` inside it.
@@ -89,7 +89,7 @@ You can also install an individual skill from its `SKILL.md` URL once the repo i
 
 ## Author a skill
 
-1. Read [`skills/shared/pp-skill-authoring/SKILL.md`](skills/shared/pp-skill-authoring/SKILL.md).
+1. Read [`skills/shared/team-skill-authoring/SKILL.md`](skills/shared/team-skill-authoring/SKILL.md).
 2. Copy [`templates/skill`](templates/skill) into `skills/<audience>/<skill-name>/`.
 3. Fill in frontmatter and instructions. Keep `SKILL.md` under 500 lines.
 4. Validate:
