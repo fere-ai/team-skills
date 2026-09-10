@@ -4,7 +4,7 @@ Workflows for software engineering, architecture, and delivery.
 
 Add a skill here when the job is design, review, incident response, testing, or shipping.
 
-Current: `double-check`.
+Current: `architecture-review`, `double-check`.
 
 Examples to add later: `writing-rfc`, `pr-review`, `incident-response`, `design-doc`, `postmortem`.
 

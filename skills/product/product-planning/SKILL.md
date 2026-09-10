@@ -42,7 +42,7 @@ Planning Progress:
 - [ ] Rabbit holes settled, cut, or marked out of bounds
 - [ ] Zero states covered
 - [ ] Existing vs new user parity checked
-- [ ] UX matches existing product; copy and flow pass in one read
+- [ ] UX matches existing product; copy, flow, loaders, and API failures pass
 - [ ] Analytics inventory done for platforms actually in the product
 ```
 
@@ -93,8 +93,10 @@ Planning Progress:
    Write copy a regular internet user can read once and act on —
    precise verbs for what the product actually does (if it only
    does text chats, do not say "talk"). The workflow itself must
-   be understandable in one go. Done when inconsistencies,
-   twice-read copy, and fuzzy verbs are named or fixed in the brief.
+   be understandable in one go. Every API wait needs a visible
+   loader; failures keep the user's work and say what to do next.
+   Done when inconsistencies, twice-read copy, fuzzy verbs, missing
+   loaders, and unhandled API failures are named or fixed.
    Load [references/ux.md](references/ux.md).
 
 8. **Inventory analytics.** Discover which product-analytics
@@ -143,6 +145,8 @@ Planning Progress:
 - Consistency with existing:
 - Copy (one-read, precise):
 - One-pass flow:
+- Loaders (per API wait):
+- API failures:
 - Gaps:
 
 ## Analytics
@@ -157,16 +161,15 @@ Planning Progress:
 ## Pitfalls
 
 - Treating a vague ask or a grab-bag as a spec — one story first.
-- Estimating a full design instead of fitting a solution to an
-  appetite.
+- Estimating a full design instead of fitting a solution to an appetite.
 - Leaving a rabbit hole as "we'll see."
 - Planning only the populated happy path — zero states ship too.
 - Designing for new accounts and leaving existing users on an island.
-- Shipping a new pattern or a new word for a job the product already
-  has.
+- Shipping a new pattern or a new word for a job the product already has.
 - Copy that needs a second read, or a verb the product does not do
   ("talk" for text chat).
 - A flow an average internet user cannot follow in one go.
+- A call with no loader, or a failure that dumps a raw error or blank screen.
 - Inventing analytics platforms the product does not have.
 - Claiming a live analytics check when no query tool was available.
 
@@ -174,14 +177,14 @@ Planning Progress:
 
 - [ ] Intention is one story, not a grab-bag
 - [ ] Appetite, rabbit holes, and no-gos are filled
-- [ ] Same-realm and impacted lists come from the repo or from
-      surfaces the user provided — not memory
+- [ ] Same-realm and impacted lists come from the repo or user-provided
+      surfaces — not memory
 - [ ] Every new surface has at least one zero state
-- [ ] Existing and new users can complete the job the same way, or
-      the difference is explicit
+- [ ] Existing and new users can complete the job the same way, or the
+      difference is explicit
 - [ ] UX matches existing patterns and words, or each break is named
-- [ ] New copy is one-read, human, and precise
-- [ ] Core flow is understandable in one go
+- [ ] New copy is one-read; core flow is understandable in one go
+- [ ] Every new API wait has a loader; failures have copy and a next step
 - [ ] Analytics list matches platforms actually integrated
 - [ ] Brief matches the template; unverified items are in Open questions
 
@@ -192,5 +195,5 @@ Load only the file the current step needs:
 - [references/boundaries.md](references/boundaries.md) — grab-bags, appetite, no-gos, rabbit holes
 - [references/impact-scan.md](references/impact-scan.md) — same-realm overlap and blast radius
 - [references/zero-states.md](references/zero-states.md) — empty, denied, and first-use states
-- [references/ux.md](references/ux.md) — consistency, one-read copy, one-pass flow
+- [references/ux.md](references/ux.md) — consistency, copy, flow, loaders, API failures
 - [references/analytics.md](references/analytics.md) — platform inventory and event map

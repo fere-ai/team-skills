@@ -1,4 +1,4 @@
-# UX: consistency, copy, one-pass flow
+# UX: consistency, copy, one-pass flow, loaders
 
 Load this file when checking the feature's words and path. This is not
 a visual design pass, a brand pass, or an accessibility spec.
@@ -64,9 +64,30 @@ from two steps ago.
 Walk the happy path out loud in plain language. If you cannot explain
 it in one short breath, the flow is not ready.
 
+## Loaders and API failures
+
+Many surfaces ship with no wait state. A new feature must show that a
+call is in progress, and recover when it fails.
+
+- Every fetch, save, delete, or other API wait has a visible loader
+  (page, section, list, or button). A frozen or blank screen while a
+  call is in flight is a gap.
+- Reuse the product's existing loader if one exists. Do not invent a
+  second spinner style.
+- The control that started the call looks busy (loader on the button
+  or the region it fills). Do not leave it clickable as if nothing
+  happened.
+- Failures are graceful: say what happened in one read, keep the
+  user's input, offer a next step (try again, go back). Do not show
+  a raw error, a blank page, or a success that did not happen.
+- Timeouts and partial results are failures too. Name what loaded
+  and what did not.
+
 ## Done when
 
 - New UI reuses existing patterns and words, or each break is named
 - Every new string passes a one-read test
 - Verbs match what the product does
 - The core job is completable without rereading or a guide
+- Every new API wait has a named loader
+- Every new API failure has copy and a next step
